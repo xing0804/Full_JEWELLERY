@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示信息列表</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container" style="margin-top: 20px">
+        <table class="table table-bordered">
+            <tr>
+                <th>所属分类</th>
+                <th>所属系列</th>
+                <th>产品名称</th>
+                <th>操作</th>
+            </tr>
+            {foreach $data as $v}
+            <tr>
+                <td>{$v["lid"]}</td>
+                <td>{$v["xid"]}</td>
+                <td>{$v["pname"]}</td>
+                <td>
+                    <a href="/JEWELLERY/index.php/admin/product/show?pid={$v['pid']}">查看</a>
+                    <a href="/JEWELLERY/index.php/admin/product/edit?pid={$v['pid']}">编辑</a>
+                </td>
+            </tr>
+            {/foreach}
+        </table>
+    </div>
+</body>
+</html>

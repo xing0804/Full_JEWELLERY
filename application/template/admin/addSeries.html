@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加系列</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{CSS_ADD}admin/addCon.css">
+    <script src="{JS_ADD}jquery.js"></script>
+</head>
+<body>
+<div class="container">
+    <form action="/JEWELLERY/index.php/admin/series/addSer" method="post">
+
+        <div class="form-group">
+            <label for="xname">系列名称</label>
+            <input type="text" class="form-control" id="xname" name="xname" placeholder="系列名称">
+        </div>
+        <div class="form-group">
+            <label for="xmsg">系列介绍</label>
+            <textarea class="form-control" id="xmsg" name="xmsg" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+</div>
+
+<script src="{JS_ADD}addSer.js"></script>
+</body>
+</html>
