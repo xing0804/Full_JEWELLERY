@@ -47,12 +47,12 @@ class upload{
         if(!is_dir($this->defaultDir)){
             mkdir($this->defaultDir,0777,true);
         }
-        $currentDir=$this->defaultDir.DIRECTORY_SEPARATOR.date("Y-m-d");
+        $currentDir=$this->defaultDir.'/'.date("Y-m-d").'/';
         if(!is_dir($currentDir)){
             mkdir($currentDir,0777,true);
         }
         $filename=time().mt_rand(1000,20000).$this->data["name"];
-        $this->fullpath=$currentDir.DIRECTORY_SEPARATOR.$filename;
+        $this->fullpath=$currentDir.$filename;
 
     }
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-08-30 16:04:39
+/* Smarty version 3.1.34-dev-7, created on 2020-08-31 03:01:51
   from 'D:\Full_Stack\php\server\JEWELLERY\application\template\admin\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f4bce17b97f62_09977235',
+  'unifunc' => 'content_5f4c681f4cf747_80923761',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '29d86e7b99e4cbce183fe795711a79fc6c6122e9' => 
     array (
       0 => 'D:\\Full_Stack\\php\\server\\JEWELLERY\\application\\template\\admin\\index.html',
-      1 => 1598802998,
+      1 => 1598842120,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f4bce17b97f62_09977235 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f4c681f4cf747_80923761 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -190,6 +190,14 @@ index.js"><?php echo '</script'; ?>
                 </ul>
             </li>
             <li class="father">
+                <span>类型管理</span>
+                <span class="more">></span>
+                <ul class="son">
+                    <li><a href="/JEWELLERY/index.php/admin/type/add" target="main">添加类型</a></li>
+                    <li><a href="/JEWELLERY/index.php/admin/type/showList" target="main">查看类型</a></li>
+                </ul>
+            </li>
+            <li class="father">
                 <span>产品管理</span>
                 <span class="more">></span>
                 <ul class="son">
@@ -201,8 +209,8 @@ index.js"><?php echo '</script'; ?>
                 <span>动态管理</span>
                 <span class="more">></span>
                 <ul class="son">
-                    <li><a href="/JEWELLERY/index.php/admin/dymamic/add" target="main">添加动态</a></li>
-                    <li><a href="/JEWELLERY/index.php/admin/dymamic/showProduct" target="main">查看动态</a></li>
+                    <li><a href="/JEWELLERY/index.php/admin/dynamic/add" target="main">添加动态</a></li>
+                    <li><a href="/JEWELLERY/index.php/admin/dynamic/showDym" target="main">查看动态</a></li>
                 </ul>
             </li>
         </ul>

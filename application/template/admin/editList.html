@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改类型</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="{JS_ADD}jquery.js"></script>
+</head>
+<body>
+<div class="container">
+    <form action="/JEWELLERY/index.php/admin/type/editList" method="post">
+
+        <div class="form-group">
+            <label for="lname">类型名称</label>
+            <input type="text" class="form-control" id="lname" name="lname" placeholder="类型名称" value="{$data['lname']}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="lmsg">类型介绍</label>
+            <textarea class="form-control" id="lmsg" name="lmsg" rows="3">{$data['lmsg']}</textarea>
+        </div>
+
+        <button type="submit" class="btn btn-default">修改</button>
+    </form>
+</div>
+
+</body>
+</html>
