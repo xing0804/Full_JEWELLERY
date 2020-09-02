@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-08-30 14:47:14
+/* Smarty version 3.1.34-dev-7, created on 2020-08-31 16:29:24
   from 'D:\Full_Stack\php\server\JEWELLERY\application\template\admin\showProduct.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f4bbbf2ade439_73734733',
+  'unifunc' => 'content_5f4d2564bf2585_81763825',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '69365c74656f79caff15c847462bbe77bbdcbdd7' => 
     array (
       0 => 'D:\\Full_Stack\\php\\server\\JEWELLERY\\application\\template\\admin\\showProduct.html',
-      1 => 1598798001,
+      1 => 1598891353,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f4bbbf2ade439_73734733 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f4d2564bf2585_81763825 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,6 +56,8 @@ $_smarty_tpl->tpl_vars['v']->do_else = false;
 ">查看</a>
                     <a href="/JEWELLERY/index.php/admin/product/edit?pid=<?php echo $_smarty_tpl->tpl_vars['v']->value['pid'];?>
 ">编辑</a>
+                    <a href="/JEWELLERY/index.php/admin/product/del?pid=<?php echo $_smarty_tpl->tpl_vars['v']->value['pid'];?>
+">删除</a>
                 </td>
             </tr>
             <?php

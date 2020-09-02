@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-08-31 03:22:08
+/* Smarty version 3.1.34-dev-7, created on 2020-09-02 16:03:12
   from 'D:\Full_Stack\php\server\JEWELLERY\application\template\admin\seeDym.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f4c6ce0865110_47086076',
+  'unifunc' => 'content_5f4fc240987c34_21565528',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '32a4ea53cd25644c2319312ee2eea50466ebfc50' => 
     array (
       0 => 'D:\\Full_Stack\\php\\server\\JEWELLERY\\application\\template\\admin\\seeDym.html',
-      1 => 1598844106,
+      1 => 1599062586,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f4c6ce0865110_47086076 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f4fc240987c34_21565528 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,9 +34,9 @@ function content_5f4c6ce0865110_47086076 (Smarty_Internal_Template $_smarty_tpl)
         <div class="form-group">
             <label for="tid">动态类型</label>
             <select class="form-control" id="tid" name="tid" readonly>
-                <option>珠宝养护</option>
-                <option>媒体宣传</option>
-                <option>行业风向</option>
+                <option><?php echo $_smarty_tpl->tpl_vars['data']->value['tid'];?>
+</option>
+
             </select>
         </div>
         <div class="form-group">

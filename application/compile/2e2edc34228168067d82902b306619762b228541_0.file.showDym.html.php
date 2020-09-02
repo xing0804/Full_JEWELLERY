@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-08-31 03:13:23
+/* Smarty version 3.1.34-dev-7, created on 2020-09-02 16:02:04
   from 'D:\Full_Stack\php\server\JEWELLERY\application\template\admin\showDym.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f4c6ad3c78c86_83548024',
+  'unifunc' => 'content_5f4fc1fc06c002_98292912',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2e2edc34228168067d82902b306619762b228541' => 
     array (
       0 => 'D:\\Full_Stack\\php\\server\\JEWELLERY\\application\\template\\admin\\showDym.html',
-      1 => 1598843599,
+      1 => 1599062520,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f4c6ad3c78c86_83548024 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f4fc1fc06c002_98292912 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,6 +33,7 @@ function content_5f4c6ad3c78c86_83548024 (Smarty_Internal_Template $_smarty_tpl)
 <div class="container" style="margin-top: 20px">
     <table class="table table-bordered">
         <tr>
+            <th>动态类型</th>
             <th>动态标题</th>
             <th>操作</th>
         </tr>
@@ -43,6 +44,8 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
 $_smarty_tpl->tpl_vars['v']->do_else = false;
 ?>
         <tr>
+            <td><?php echo $_smarty_tpl->tpl_vars['v']->value["tid"];?>
+</td>
             <td><?php echo $_smarty_tpl->tpl_vars['v']->value["dtitle"];?>
 </td>
             <td>

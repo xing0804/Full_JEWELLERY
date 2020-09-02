@@ -1,12 +1,42 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.34-dev-7, created on 2020-09-02 15:08:52
+  from 'D:\Full_Stack\php\server\JEWELLERY\application\template\index\culture.html' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5f4fb584c66380_29829846',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '9ecde4df599c66d2c9d6432cd7a7a2afe580e261' => 
+    array (
+      0 => 'D:\\Full_Stack\\php\\server\\JEWELLERY\\application\\template\\index\\culture.html',
+      1 => 1599059330,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5f4fb584c66380_29829846 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>品牌文化</title>
-    <link rel="stylesheet" href="{CSS_ADD}index/culture.css">
-    <script src="{JS_ADD}index/animate.js"></script>
-    <script src="{JS_ADD}index/culture.js"></script>
+    <link rel="stylesheet" href="<?php echo CSS_ADD;?>
+index/culture.css">
+    <?php echo '<script'; ?>
+ src="<?php echo JS_ADD;?>
+index/animate.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="<?php echo JS_ADD;?>
+index/culture.js"><?php echo '</script'; ?>
+>
 </head>
 <body>
     <!-- logo开始 -->
@@ -172,4 +202,5 @@
         <span>></span>
     </div>
 </body>
-</html>
+</html><?php }
+}

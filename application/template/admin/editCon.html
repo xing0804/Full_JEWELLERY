@@ -10,22 +10,17 @@
 </head>
 <body>
 <div class="container">
-    <form action="/JEWELLERY/index.php/admin/product/addCon" method="post">
+    <form action="/JEWELLERY/index.php/admin/product/editCon?pid={$data['pid']}" method="post">
         <div class="form-group">
             <label for="lid">所属分类</label>
-            <select class="form-control" id="lid" name="lid">
-                <option>戒指</option>
-                <option>耳环/耳钉</option>
-                <option>项链/吊坠</option>
-                <option>手镯/手链</option>
+            <select class="form-control" id="lid" name="lid" lid="{$data['lid']}">
+
             </select>
         </div>
         <div class="form-group">
             <label for="xid">所属系列</label>
-            <select class="form-control" id="xid" name="xid">
-                <option>一生一世</option>
-                <option>几何系列</option>
-                <option>字母系列</option>
+            <select class="form-control" id="xid" name="xid" xid="{$data['xid']}">
+
             </select>
         </div>
         <div class="form-group">
@@ -64,12 +59,25 @@
             <label for="psaleback">售后保障</label>
             <textarea class="form-control" id="psaleback" name="psaleback" rows="3">{$data['psaleback']}</textarea>
         </div>
-        <input type="hidden" value="hidden" name="pimgurl">
-        <div class="upload"></div>
+        <div class="form-group seeImg">
+            <label for="pimgurl">动态图片</label>
+            <img src="{$data['pimgurl']}" alt="" style="display:block;width: 200px;height: 200px" id="pimgurl">
+        </div>
+
+        <div class="form-group editImg" style="display: none;margin-bottom: 20px">
+            <label for="pimgurl">动态图片</label>
+            <input type="hidden" value="hidden" name="pimgurl">
+            <div class="upload"></div>
+        </div>
+
+
+        <button type="button" class="btn btn-default editbtn">修改图片</button>
+        <br><br>
+
         <button type="submit" class="btn btn-default">修改</button>
     </form>
 </div>
 <script src="{JS_ADD}upload.js"></script>
-<script src="{JS_ADD}addCon.js"></script>
+<script src="{JS_ADD}editCon.js"></script>
 </body>
 </html>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-08-31 00:21:49
+/* Smarty version 3.1.34-dev-7, created on 2020-09-01 18:22:15
   from 'D:\Full_Stack\php\server\JEWELLERY\application\template\admin\category.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f4c429dce3c38_90521671',
+  'unifunc' => 'content_5f4e915754ab71_06673337',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'adcd8e70721d6b2e9dad71e1b0e7de59ff0761b9' => 
     array (
       0 => 'D:\\Full_Stack\\php\\server\\JEWELLERY\\application\\template\\admin\\category.html',
-      1 => 1598718174,
+      1 => 1598982322,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f4c429dce3c38_90521671 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f4e915754ab71_06673337 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,38 +36,11 @@ function content_5f4c429dce3c38_90521671 (Smarty_Internal_Template $_smarty_tpl)
             <input type="submit" value="添加">
         </form>
         <?php if ($_smarty_tpl->tpl_vars['data']->value) {?>
-        <table class="table table-bordered">
-            <tr>
-                <th>层级</th>
-                <th>分类名称</th>
-                <th>操作</th>
-            </tr>
-            <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['data']->value, 'v');
-$_smarty_tpl->tpl_vars['v']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
-$_smarty_tpl->tpl_vars['v']->do_else = false;
-?>
-            <tr>
-                <td>一级分类</td>
-                <td><?php echo $_smarty_tpl->tpl_vars['v']->value["cname"];?>
-</td>
-                <td>添加</td>
-            </tr>
-            <?php
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-            <tr>
-                <td>二级分类</td>
-                <td>↓项目</td>
-                <td>添加</td>
-            </tr>
-            <tr>
-                <td>三级分类</td>
-                <td>↓↓项目</td>
-                <td>添加</td>
-            </tr>
+        <table class='table table-bordered'>
+            <?php echo $_smarty_tpl->tpl_vars['data']->value;?>
+
         </table>
+
         <?php } else { ?>
         <table class="table table-bordered">
             <tr>
@@ -76,6 +49,52 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </table>
         <?php }?>
     </div>
+    <style>
+        .pannel{
+            width: 40%;
+            height: 30%;
+            background-color: #fff;
+            box-shadow: 0 0 4px #000;
+            position: absolute;
+            left: 0;top: 0;right: 0;bottom: 0;
+            margin: auto;
+            z-index: 2;
+            display: none;
+            padding: 1%;
+        }
+    </style>
+    <div class="pannel addpannel">
+        <div class="close">
+            X
+        </div>
+        <form action="/JEWELLERY/index.php/admin/category/add" method="post">
+            <input type="text" name="cname">
+            <input type="hidden" name="cid">
+            <input type="submit" value="提交">
+        </form>
+    </div>
+
+    <div class="pannel editpannel">
+        <div class="close">
+            X
+        </div>
+        <form action="/JEWELLERY/index.php/admin/category/add" method="post">
+            <input type="text" name="cname">
+            <select name="lid" id="opts">
+
+            </select>
+            <input type="button" value="修改">
+        </form>
+    </div>
+
+    <?php echo '<script'; ?>
+ src="<?php echo JS_ADD;?>
+jquery.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="<?php echo JS_ADD;?>
+category.js"><?php echo '</script'; ?>
+>
 </body>
 </html><?php }
 }

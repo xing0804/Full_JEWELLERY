@@ -13,30 +13,10 @@
             <input type="submit" value="添加">
         </form>
         {if $data}
-        <table class="table table-bordered">
-            <tr>
-                <th>层级</th>
-                <th>分类名称</th>
-                <th>操作</th>
-            </tr>
-            {foreach $data as $v}
-            <tr>
-                <td>一级分类</td>
-                <td>{$v["cname"]}</td>
-                <td>添加</td>
-            </tr>
-            {/foreach}
-            <tr>
-                <td>二级分类</td>
-                <td>↓项目</td>
-                <td>添加</td>
-            </tr>
-            <tr>
-                <td>三级分类</td>
-                <td>↓↓项目</td>
-                <td>添加</td>
-            </tr>
+        <table class='table table-bordered'>
+            {$data}
         </table>
+
         {else}
         <table class="table table-bordered">
             <tr>
@@ -45,5 +25,45 @@
         </table>
         {/if}
     </div>
+    <style>
+        .pannel{
+            width: 40%;
+            height: 30%;
+            background-color: #fff;
+            box-shadow: 0 0 4px #000;
+            position: absolute;
+            left: 0;top: 0;right: 0;bottom: 0;
+            margin: auto;
+            z-index: 2;
+            display: none;
+            padding: 1%;
+        }
+    </style>
+    <div class="pannel addpannel">
+        <div class="close">
+            X
+        </div>
+        <form action="/JEWELLERY/index.php/admin/category/add" method="post">
+            <input type="text" name="cname">
+            <input type="hidden" name="cid">
+            <input type="submit" value="提交">
+        </form>
+    </div>
+
+    <div class="pannel editpannel">
+        <div class="close">
+            X
+        </div>
+        <form action="/JEWELLERY/index.php/admin/category/add" method="post">
+            <input type="text" name="cname">
+            <select name="lid" id="opts">
+
+            </select>
+            <input type="button" value="修改">
+        </form>
+    </div>
+
+    <script src="{JS_ADD}jquery.js"></script>
+    <script src="{JS_ADD}category.js"></script>
 </body>
 </html>

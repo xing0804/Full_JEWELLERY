@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-08-31 03:01:51
+/* Smarty version 3.1.34-dev-7, created on 2020-09-01 00:36:07
   from 'D:\Full_Stack\php\server\JEWELLERY\application\template\admin\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f4c681f4cf747_80923761',
+  'unifunc' => 'content_5f4d97778b1fe7_02545682',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '29d86e7b99e4cbce183fe795711a79fc6c6122e9' => 
     array (
       0 => 'D:\\Full_Stack\\php\\server\\JEWELLERY\\application\\template\\admin\\index.html',
-      1 => 1598842120,
+      1 => 1598920287,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f4c681f4cf747_80923761 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f4d97778b1fe7_02545682 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -178,7 +178,7 @@ index.js"><?php echo '</script'; ?>
                 <span class="more">></span>
                 <ul class="son">
                     <li><a href="/JEWELLERY/index.php/admin/category/int" target="main">查看栏目</a></li>
-                    <li><a href="http://baidu.com" target="main">修改栏目</a></li>
+                    <li><a href="/JEWELLERY/index.php/admin/category/int" target="main">修改栏目</a></li>
                 </ul>
             </li>
             <li class="father">

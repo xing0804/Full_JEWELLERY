@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JEWELLERY练习页面</title>
     <link rel="stylesheet" href="{CSS_ADD}index/index.css">
+    <script src="{JS_ADD}jquery.js"></script>
     <script src="{JS_ADD}index/animate.js"></script>
     <script src="{JS_ADD}index/index.js"></script>
 </head>
@@ -26,22 +27,12 @@
                     <a href="index.html">首页</a>
                     <i class="underline" style="display: block;"></i>
                 </li>
+                {foreach $menuData as $v}
                 <li>
-                    <a href="culture.html">品牌文化</a>
+                    <a href="{$v['jumpurl']}">{$v["cname"]}</a>
                     <i class="underline"></i>
                 </li>
-                <li>
-                    <a href="jewelry.html">珠宝首饰</a>
-                    <i class="underline"></i>
-                </li>
-                <li>
-                    <a href="dynamics.html">品牌动态</a>
-                    <i class="underline"></i>
-                </li>
-                <li>
-                    <a href="contact.html">联系我们</a>
-                    <i class="underline"></i>
-                </li>
+                {/foreach}
             </ul>
         </div>
     </div>

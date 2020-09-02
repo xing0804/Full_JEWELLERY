@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-08-30 17:28:54
+/* Smarty version 3.1.34-dev-7, created on 2020-09-02 15:30:35
   from 'D:\Full_Stack\php\server\JEWELLERY\application\template\index\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f4be1d6652886_68180922',
+  'unifunc' => 'content_5f4fba9bba9812_29855318',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '726d68ab44907c1cd3327cd3e91a6d08ffb55c12' => 
     array (
       0 => 'D:\\Full_Stack\\php\\server\\JEWELLERY\\application\\template\\index\\index.html',
-      1 => 1598808531,
+      1 => 1599060395,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f4be1d6652886_68180922 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f4fba9bba9812_29855318 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -30,6 +30,10 @@ function content_5f4be1d6652886_68180922 (Smarty_Internal_Template $_smarty_tpl)
     <title>JEWELLERY练习页面</title>
     <link rel="stylesheet" href="<?php echo CSS_ADD;?>
 index/index.css">
+    <?php echo '<script'; ?>
+ src="<?php echo JS_ADD;?>
+jquery.js"><?php echo '</script'; ?>
+>
     <?php echo '<script'; ?>
  src="<?php echo JS_ADD;?>
 index/animate.js"><?php echo '</script'; ?>
@@ -56,22 +60,21 @@ index/index.js"><?php echo '</script'; ?>
                     <a href="index.html">首页</a>
                     <i class="underline" style="display: block;"></i>
                 </li>
+                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['menuData']->value, 'v');
+$_smarty_tpl->tpl_vars['v']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
+$_smarty_tpl->tpl_vars['v']->do_else = false;
+?>
                 <li>
-                    <a href="culture.html">品牌文化</a>
+                    <a href="<?php echo $_smarty_tpl->tpl_vars['v']->value['jumpurl'];?>
+"><?php echo $_smarty_tpl->tpl_vars['v']->value["cname"];?>
+</a>
                     <i class="underline"></i>
                 </li>
-                <li>
-                    <a href="jewelry.html">珠宝首饰</a>
-                    <i class="underline"></i>
-                </li>
-                <li>
-                    <a href="dynamics.html">品牌动态</a>
-                    <i class="underline"></i>
-                </li>
-                <li>
-                    <a href="contact.html">联系我们</a>
-                    <i class="underline"></i>
-                </li>
+                <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </ul>
         </div>
     </div>

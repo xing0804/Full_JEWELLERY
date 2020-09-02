@@ -43,7 +43,6 @@ tinymce.init({
     },
     autosave_ask_before_unload: false,
 });
-
 //上传图片
 var uploadObj=new upload();
 
@@ -55,3 +54,67 @@ uploadObj.upBtn.style.lineHeight="50px";
 uploadObj.up("/JEWELLERY/index.php/admin/product/uploadfile",function (e) {
     $("input[type=hidden]").val(e[0]);
 })
+$(".editbtn").click(function () {
+    console.log(1);
+    $(".seeImg").css("display","none");
+    $(".editImg").css("display","block");
+})
+
+
+$.ajax({
+    url:"/JEWELLERY/index.php/admin/product/getTypeOption",
+    dataType:"json",
+    success:function (e) {
+        var lid=$("#lid").attr("lid");
+        tree(e,lid);
+        $("#lid").html(str);
+        str="";
+    }
+})
+
+var str="";
+
+function tree(data,lid){
+    for(var i=0;i<data.length;i++){
+        if(lid!=undefined){
+            if(lid==data[i].cname){
+                str+="<option value='"+data[i].cid+"' selected>"+data[i].cname+"</option>";
+            }else {
+                str+="<option value='"+data[i].cid+"'>"+data[i].cname+"</option>";
+            }
+        }else {
+            str+="<option value='"+data[i].cid+"'>"+data[i].cname+"</option>";
+        }
+
+    }
+}
+
+$.ajax({
+    url:"/JEWELLERY/index.php/admin/product/getSeriesOption",
+    dataType:"json",
+    success:function (e) {
+        var xid=$("#xid").attr("xid");
+        tree2(e,xid);
+        $("#xid").html(str2);
+        str2="";
+    }
+})
+
+var str2="";
+
+function tree2(data,xid){
+
+    for(var i=0;i<data.length;i++){
+
+        if(xid!=undefined){
+            if(xid==data[i].cname){
+                str2+="<option value='"+data[i].cid+"' selected>"+data[i].cname+"</option>";
+            }else {
+                str2+="<option value='"+data[i].cid+"'>"+data[i].cname+"</option>";
+            }
+        }else {
+            str2+="<option value='"+data[i].cid+"'>"+data[i].cname+"</option>";
+        }
+
+    }
+}

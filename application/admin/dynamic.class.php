@@ -26,7 +26,11 @@ class dynamic{
         $database=new db();
         $db=$database->db;
 
-        $db->query("insert into dynamic (tid,dtitle,dmsg,dimgurl) values ('$tid','$dtitle','$dmsg','$dimgurl')");
+        $result=$db->query("select * from category where cid=".$tid);
+        $row=$result->fetch_assoc();
+        $type=$row["cname"];
+
+        $db->query("insert into dynamic (tid,dtitle,dmsg,dimgurl) values ('$type','$dtitle','$dmsg','$dimgurl')");
 
         if($db->affected_rows>0){
             echo "<script>alert('插入成功！');location.href='/JEWELLERY/index.php/admin/dynamic/add'</script>";
@@ -73,6 +77,52 @@ class dynamic{
     }
 
     function edit(){
+        $did=$_GET["did"];
+        $database=new db();
+        $db=$database->db;
+        $result=$db->query("select * from dynamic where did=".$did);
+        $row=$result->fetch_assoc();
+        $smarty=new smarty();
+        $smarty->assign("data",$row);
+        $smarty->display("admin/editDym.html");
+    }
+
+    function editDym(){
+
+        $database=new db();
+        $db=$database->db;
+
+
+        $did=$_GET["did"];
+        $tid=$_POST["tid"];
+        $dtitle=$_POST["dtitle"];
+        $dmsg=$_POST["dmsg"];
+        $dimgurl=$_POST["dimgurl"];
+
+        $result=$db->query("select * from category where cid=".$tid);
+        $row=$result->fetch_assoc();
+        $type=$row["cname"];
+
+
+
+        if($dimgurl!=="hidden"){
+            $db->query("update dynamic set tid='$type',dtitle='$dtitle',dmsg='$dmsg',dimgurl='$dimgurl' where did=".$did);
+
+            if($db->affected_rows>0){
+                echo "<script>alert('修改成功！');location.href='/JEWELLERY/index.php/admin/dynamic/showDym'</script>";
+            }else{
+                echo "<script>alert('修改失败！');location.href='/JEWELLERY/index.php/admin/dynamic/showDym'</script>";
+            }
+        }else{
+            $db->query("update dynamic set tid='$type',dtitle='$dtitle',dmsg='$dmsg' where did=".$did);
+
+            if($db->affected_rows>0){
+                echo "<script>alert('修改成功！');location.href='/JEWELLERY/index.php/admin/dynamic/showDym'</script>";
+            }else{
+                echo "<script>alert('修改失败！');location.href='/JEWELLERY/index.php/admin/dynamic/showDym'</script>";
+            }
+        }
+
 
     }
 
@@ -82,4 +132,24 @@ class dynamic{
         $path=HOST_ADD."/"."JEWELLERY"."/".$upload->fullpath;
         echo $path;
     }
+
+    function getOption(){
+        $database=new db();
+        $this->db=$database->db;
+        $result1=$this->db->query("select * from category where cname='品牌动态'");
+        $row1=$result1->fetch_assoc();
+
+        $lid=$row1["cid"];
+
+
+        $result=$this->db->query("select * from category where lid=".$lid);
+
+        $arr=[];
+        while ($row=$result->fetch_assoc()){
+            $arr[]=$row;
+        }
+        echo json_encode($arr);
+
+    }
+
 }
