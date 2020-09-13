@@ -35,7 +35,7 @@ window.onload = function () {
     for(let i=0;i<imgboxs.length;i++){
        
         imgboxs[i].onmouseover=function(){
-            imgs[i].style.animation="imgover 2s";
+            imgs[i].style.animation="imgover 2s forwards";
         }
         imgboxs[i].onmouseout=function(){
             imgs[i].style.animation="none";
@@ -61,7 +61,7 @@ window.onload = function () {
 
     window.onscroll=function(){
         var st = document.documentElement.scrollTop;
-        if(st>700){
+        if(st>200){
             topbtn.style.opacity=1;
         }else{
             topbtn.style.opacity=0;
@@ -72,31 +72,42 @@ window.onload = function () {
             console.log("back");
             animate(document.documentElement, {
                 scrollTop: 0
-            }, 2000);
+            }, 500);
         }
     };
 
     //查看更多
-    var morebtn=document.querySelector(".more");
-    var conList=document.querySelector(".con-list");
-    var main=document.querySelector(".main");
-    console.log(main);
-    morebtn.onclick=function(){
-        morebtn.style.display="none";
-        main.style.height="1350px"
-        conList.style.height="1350px";
-    }
+    // var morebtn=document.querySelector(".more");
+    // var conList=document.querySelector(".con-list");
+    // var main=document.querySelector(".main");
+    // console.log(main);
+    // morebtn.onclick=function(){
+    //     morebtn.style.display="none";
+    //     main.style.height="1350px"
+    //     conList.style.height="1350px";
+    // }
 
     //标签点击切换内容
     var as=document.querySelectorAll(".search-label a");
-    var cons=document.querySelectorAll(".containter");
     for(let j=0;j<as.length;j++){
         as[j].onclick=function(){
-            for(var i=0;i<cons.length;i++){
-                cons[i].style.display="none";
-            }
-            cons[j].style.display="block";
+            var tid=$(this).attr("tid");
+            console.log(tid);
+            $.ajax({
+                url:"/JEWELLERY/index.php/index/index/DymList?tid="+tid,
+                dataType:"json",
+                success(e){
+                    console.log(e);
+                    $(".con-list").html(e);
+                },
+                error(){
+                    console.log("error");
+                }
+            });
+            // var high=document.querySelector(".con-list").offsetHeight;
+            // document.querySelector(".main").style.height=high+"px";
         }
     }
+
     
 }

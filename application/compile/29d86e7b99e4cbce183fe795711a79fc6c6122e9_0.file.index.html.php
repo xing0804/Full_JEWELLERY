@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-09-01 00:36:07
+/* Smarty version 3.1.34-dev-7, created on 2020-09-08 12:04:59
   from 'D:\Full_Stack\php\server\JEWELLERY\application\template\admin\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f4d97778b1fe7_02545682',
+  'unifunc' => 'content_5f57736b370717_37755954',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '29d86e7b99e4cbce183fe795711a79fc6c6122e9' => 
     array (
       0 => 'D:\\Full_Stack\\php\\server\\JEWELLERY\\application\\template\\admin\\index.html',
-      1 => 1598920287,
+      1 => 1599566684,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f4d97778b1fe7_02545682 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f57736b370717_37755954 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +36,19 @@ function content_5f4d97778b1fe7_02545682 (Smarty_Internal_Template $_smarty_tpl)
             width: 100%;
             height: 100px;
             background-color: #FBD7BF;
+            /*background: #FFFFFF;*/
             position: relative;
+        }
+        .logo{
+            font-family: 'Algerian';
+            display: block;
+            height: 20px;
+            width: 600px;
+            font-size: 47px;
+            position: absolute;
+            top: 18px;
+            left: 20px;
+            color: #9B410E;
         }
         .title{
             display: block;
@@ -44,28 +56,28 @@ function content_5f4d97778b1fe7_02545682 (Smarty_Internal_Template $_smarty_tpl)
             width: 600px;
             font-size: 30px;
             position: absolute;
-            top: 40px;
-            left: 50px;
+            top: 32px;
+            left: 315px;
             color: #9B410E;
             font-family: "方正大标宋简体";
         }
         .uname{
             display: block;
             height: 20px;
-            width: 80px;
-            font-size: 10px;
+            width: 100px;
+            font-size: 14px;
             color: #9B410E;
             position: absolute;
             top: 40px;
-            right: 100px;
+            right: 150px;
             line-height: 20px;
 
         }
         .out{
             display: block;
             height: 20px;
-            width: 50px;
-            font-size: 10px;
+            width: 80px;
+            font-size: 14px;
             color: #9B410E;
             position: absolute;
             top: 40px;
@@ -157,6 +169,7 @@ index.js"><?php echo '</script'; ?>
 </head>
 <body>
 <div class="header">
+    <span class="logo">JEWELLERY</span>
     <span class="title">欢迎使用JEWELLERY后台管理系统</span>
     <span class="uname">您好：<?php echo $_smarty_tpl->tpl_vars['uname']->value;?>
 </span>
@@ -211,6 +224,22 @@ index.js"><?php echo '</script'; ?>
                 <ul class="son">
                     <li><a href="/JEWELLERY/index.php/admin/dynamic/add" target="main">添加动态</a></li>
                     <li><a href="/JEWELLERY/index.php/admin/dynamic/showDym" target="main">查看动态</a></li>
+                </ul>
+            </li>
+            <li class="father">
+                <span>设计师管理</span>
+                <span class="more">></span>
+                <ul class="son">
+                    <li><a href="/JEWELLERY/index.php/admin/designer/add" target="main">添加设计师</a></li>
+                    <li><a href="/JEWELLERY/index.php/admin/designer/showDes" target="main">查看设计师</a></li>
+                </ul>
+            </li>
+            <li class="father">
+                <span>主页类型管理</span>
+                <span class="more">></span>
+                <ul class="son">
+                    <li><a href="/JEWELLERY/index.php/admin/homeType/add" target="main">添加类型</a></li>
+                    <li><a href="/JEWELLERY/index.php/admin/homeType/show" target="main">查看类型</a></li>
                 </ul>
             </li>
         </ul>

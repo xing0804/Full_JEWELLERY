@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-08-30 12:57:24
+/* Smarty version 3.1.34-dev-7, created on 2020-09-10 12:40:06
   from 'D:\Full_Stack\php\server\JEWELLERY\application\template\admin\addCon.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f4ba23471c039_77842373',
+  'unifunc' => 'content_5f5a1ea6adf693_12810979',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b9d068731d967d22194dfdb42158d9fc61929bb6' => 
     array (
       0 => 'D:\\Full_Stack\\php\\server\\JEWELLERY\\application\\template\\admin\\addCon.html',
-      1 => 1598791654,
+      1 => 1599741602,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f4ba23471c039_77842373 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f5a1ea6adf693_12810979 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,6 +62,17 @@ tinymce/tinymce.min.js"><?php echo '</script'; ?>
             <label for="pname">产品名称</label>
             <input type="text" class="form-control" id="pname" name="pname" placeholder="产品名称">
         </div>
+        <div class="radio">
+            <b>是否是推荐位</b>
+            <label>
+                <input type="radio" name="isindex" value="yes" checked>
+                是
+            </label>
+            <label>
+                <input type="radio" name="isindex" value="no">
+                否
+            </label>
+        </div>
         <div class="form-group">
             <label for="pprice">产品价格</label>
             <input type="text" class="form-control" id="pprice" name="pprice" placeholder="产品价格">
@@ -96,7 +107,7 @@ tinymce/tinymce.min.js"><?php echo '</script'; ?>
         </div>
         <input type="hidden" value="hidden" name="pimgurl">
         <div class="upload"></div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default" style="margin-top: 20px">Submit</button>
     </form>
 </div>
 <?php echo '<script'; ?>

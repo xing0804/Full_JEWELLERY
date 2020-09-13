@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-09-02 15:30:35
+/* Smarty version 3.1.34-dev-7, created on 2020-09-10 12:51:21
   from 'D:\Full_Stack\php\server\JEWELLERY\application\template\index\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f4fba9bba9812_29855318',
+  'unifunc' => 'content_5f5a2149b3bc69_39472192',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '726d68ab44907c1cd3327cd3e91a6d08ffb55c12' => 
     array (
       0 => 'D:\\Full_Stack\\php\\server\\JEWELLERY\\application\\template\\index\\index.html',
-      1 => 1599060395,
+      1 => 1599741480,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f4fba9bba9812_29855318 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f5a2149b3bc69_39472192 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -82,36 +82,42 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <!-- banner区开始 -->
     <div class="banner">
         <div class="banner-container">
-            <div class="img1 img">
-                <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvNzI1MzgwMzI5ZDY0NzM5ZmFhMmQwMzZkM2Y1N2I3ZjMtOTAud2VicA_p_p100_p_3D_p_p100_p_3D.webp" alt="">
-                <span class="banner-title">几何系列</span>
-                <span class="banner-translate">Geometry series</span>
-            </div>
+            <a href="/JEWELLERY/index.php/index/index/ShowList?name=<?php echo $_smarty_tpl->tpl_vars['bigData']->value['name'];?>
+">
+                <div class="img1 img">
+                    <img src="<?php echo $_smarty_tpl->tpl_vars['bigData']->value['himgurl'];?>
+" alt="">
+                    <span class="banner-title"><?php echo $_smarty_tpl->tpl_vars['bigData']->value['name'];?>
+</span>
+                    <span class="banner-translate"><?php echo $_smarty_tpl->tpl_vars['bigData']->value['ename'];?>
+</span>
+                </div>
+            </a>
+
             <div class="small-img">
-                <div class="img2 img">
-                    <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvZTFkNDVjODFlODEwNGYzOTljZGIyZjc2NmUyMDBhMWItOTAud2VicA_p_p100_p_3D_p_p100_p_3D.webp"
-                        alt="">
-                    <span class="banner-title">戒指</span>
-                    <span class="banner-translate">Rings</span>
-                </div>
-                <div class="img2 img">
-                    <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvYmE4N2Q3ODkxMzkwY2NjOTk5MTNhNDczM2FjYTc5MDktOTAud2VicA_p_p100_p_3D_p_p100_p_3D.webp"
-                        alt="">
-                    <span class="banner-title">耳环/耳钉</span>
-                    <span class="banner-translate">Earings</span>
-                </div>
-                <div class="img2 img">
-                    <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvNTEwZjU1YzM1NTBhNzdmMGIyNmVmMGYxOTliMjU3OTItOTAud2VicA_p_p100_p_3D_p_p100_p_3D.webp"
-                        alt="">
-                    <span class="banner-title">一生一世</span>
-                    <span class="banner-translate">Lifetime</span>
-                </div>
-                <div class="img2 img">
-                    <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvYzkyNzZiZjNhYWVmOTk3YmZhN2ZmZjU2YWE5MDU1YjYtOTAud2VicA_p_p100_p_3D_p_p100_p_3D.webp"
-                        alt="">
-                    <span class="banner-title">字母系列</span>
-                    <span class="banner-translate">Subtitle series</span>
-                </div>
+                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['smallData']->value, 'v', false, 'k');
+$_smarty_tpl->tpl_vars['v']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['k']->value => $_smarty_tpl->tpl_vars['v']->value) {
+$_smarty_tpl->tpl_vars['v']->do_else = false;
+?>
+                <a href="/JEWELLERY/index.php/index/index/ShowList?name=<?php echo $_smarty_tpl->tpl_vars['v']->value['name'];?>
+">
+                    <div class="img2 img">
+                        <img src="<?php echo $_smarty_tpl->tpl_vars['v']->value['himgurl'];?>
+"
+                             alt="">
+                        <span class="banner-title"><?php echo $_smarty_tpl->tpl_vars['v']->value['name'];?>
+</span>
+                        <span class="banner-translate"><?php echo $_smarty_tpl->tpl_vars['v']->value['ename'];?>
+</span>
+                    </div>
+                </a>
+
+                <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+
             </div>
         </div>
     </div>
@@ -133,78 +139,28 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </div>
 
         <div class="main-container">
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['productData']->value, 'v');
+$_smarty_tpl->tpl_vars['v']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
+$_smarty_tpl->tpl_vars['v']->do_else = false;
+?>
             <div class="container-item img">
-                <a href="product.html">
+                <a href="/JEWELLERY/index.php/index/index/showPro?pid=<?php echo $_smarty_tpl->tpl_vars['v']->value['pid'];?>
+">
                     <div class="item-img">
-                        <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvM2UwOGI2Njc2MDVhNzA4YmM2MDA4YWUxMmViNmQ5MGQtMzAweDQwMC05MC53ZWJw.webp"
+                        <img src="<?php echo $_smarty_tpl->tpl_vars['v']->value['pimgurl'];?>
+"
                             alt="">
                     </div>
-                    <span>一生一世 - 耳钉</span>
+                    <span><?php echo $_smarty_tpl->tpl_vars['v']->value['pname'];?>
+</span>
                 </a>
             </div>
-            <div class="container-item img">
-                <a href="#">
-                    <div class="item-img">
-                        <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvNWIyN2UxMGQzOWE5ZDVhMzNmOWViOTY4NGU4ZTJkOWItMzAweDQwMC05MC53ZWJw.webp"
-                            alt="">
-                    </div>
-                    <span>一生一世 – 珍珠吊坠</span>
-                </a>
-            </div>
-            <div class="container-item img">
-                <a href="#">
-                    <div class="item-img">
-                        <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvZjcyOGMxMzJlNDQyOGFiZTc5YWU4YjMyZGM4NGI2NGQtMzAweDQwMC05MC53ZWJw.webp"
-                            alt="">
-                    </div>
-                    <span>一生一世 - 戒指</span>
-                </a>
-            </div>
-            <div class="container-item img">
-                <a href="#">
-                    <div class="item-img">
-                        <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvM2I3NDkwZmFhZDdiNGM3N2E4MTc1YmFkNWJkMDE3NmQtMzAweDQwMC05MC53ZWJw.webp"
-                            alt="">
-                    </div>
-                    <span>一生一世 - 珍珠耳钉</span>
-                </a>
-            </div>
-            <div class="container-item img">
-                <a href="#">
-                    <div class="item-img">
-                        <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvM2RjNmM1NmJkMWIyNjMzMzcyNzE5YTY4NzYxYzVlZjYtMzAweDQwMC05MC53ZWJw.webp"
-                            alt="">
-                    </div>
-                    <span>一生一世 - 项链</span>
-                </a>
-            </div>
-            <div class="container-item img">
-                <a href="#">
-                    <div class="item-img">
-                        <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvZDIzN2YyMTk2NjQ3ZTVjMWI4NmYyMDE2ZjQ1NmFmMmItMzAweDQwMC05MC53ZWJw.webp"
-                            alt="">
-                    </div>
-                    <span>字母系列 - 戒指</span>
-                </a>
-            </div>
-            <div class="container-item img">
-                <a href="#">
-                    <div class="item-img">
-                        <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvY2ZmZmQzZWI2MGNhNjliMTFiZDJmMDRiZWU5N2FlZTYtMzAweDQwMC05MC53ZWJw.webp"
-                            alt="">
-                    </div>
-                    <span>字母系列 - 零</span>
-                </a>
-            </div>
-            <div class="container-item img">
-                <a href="#">
-                    <div class="item-img">
-                        <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvMmRjMTgwODZkYjFjOGZmMWE5MmM5ZmFiOWVkZTkxNmItMzAweDQwMC05MC53ZWJw.webp"
-                            alt="">
-                    </div>
-                    <span>字母系列 - 五</span>
-                </a>
-            </div>
+            <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+
         </div>
     </div>
     <!-- main结束 -->

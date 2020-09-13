@@ -27,6 +27,7 @@ class product{
         $ppack=$_POST["ppack"];
         $psaleback=$_POST["psaleback"];
         $pimgurl=$_POST["pimgurl"];
+        $isindex=$_POST["isindex"];
 
         $database=new db();
         $db=$database->db;
@@ -34,7 +35,7 @@ class product{
 
 //        exit();
 
-        $db->query("insert into product (lid,xid,pname,pprice,pmsg,pno,pmeterial,pcolor,pmain,ppack,psaleback,pimgurl) values ('$lid','$xid','$pname','$pprice','$pmsg','$pno','$pmeterial','$pcolor','$pmain','$ppack','$psaleback','$pimgurl')");
+        $db->query("insert into product (lid,xid,pname,pprice,pmsg,pno,pmeterial,pcolor,pmain,ppack,psaleback,pimgurl,isindex) values ('$lid','$xid','$pname','$pprice','$pmsg','$pno','$pmeterial','$pcolor','$pmain','$ppack','$psaleback','$pimgurl','$isindex')");
 
         if($db->affected_rows>0){
             echo "<script>alert('插入成功！');location.href='/JEWELLERY/index.php/admin/product/add'</script>";
@@ -91,6 +92,7 @@ class product{
         $ppack=$_POST["ppack"];
         $psaleback=$_POST["psaleback"];
         $pimgurl=$_POST["pimgurl"];
+        $isindex=$_POST["isindex"];
 
         $database=new db();
         $db=$database->db;
@@ -104,7 +106,7 @@ class product{
         $Series=$row1["cname"];
 
         if($pimgurl!=="hidden"){
-            $db->query("update product set lid='$type',xid='$Series',pname='$pname',pprice='$pprice',pmsg='$pmsg',pno='$pno',pmeterial='$pmeterial',pcolor='$pcolor',pmain='$pmain',ppack='$ppack',psaleback='$psaleback',pimgurl='$pimgurl' where pid=".$pid);
+            $db->query("update product set lid='$type',xid='$Series',pname='$pname',pprice='$pprice',pmsg='$pmsg',pno='$pno',pmeterial='$pmeterial',pcolor='$pcolor',pmain='$pmain',ppack='$ppack',psaleback='$psaleback',pimgurl='$pimgurl',isindex='$isindex' where pid=".$pid);
             if($db->affected_rows>0){
                 echo "<script>alert('修改成功！');location.href='/JEWELLERY/index.php/admin/product/showProduct'</script>";
             }else{

@@ -21,25 +21,15 @@
         <div class="navbox">
             <ul>
                 <li>
-                    <a href="index.html">首页</a>
+                    <a href="/JEWELLERY/index.php/index/index/int">首页</a>
                     <i class="underline"></i>
                 </li>
+                {foreach $menuData as $v}
                 <li>
-                    <a href="culture.html">品牌文化</a>
-                    <i class="underline" style="display: block;"></i>
-                </li>
-                <li>
-                    <a href="jewelry.html">珠宝首饰</a>
+                    <a href="{$v['jumpurl']}">{$v["cname"]}</a>
                     <i class="underline"></i>
                 </li>
-                <li>
-                    <a href="dynamics.html">品牌动态</a>
-                    <i class="underline"></i>
-                </li>
-                <li>
-                    <a href="contact.html">联系我们</a>
-                    <i class="underline"></i>
-                </li>
+                {/foreach}
             </ul>
         </div>
     </div>
@@ -67,42 +57,17 @@
     <!-- main区结束 -->
     <!-- container开始 -->
     <div class="container">
+        {foreach $desData as $v}
         <div class="container-item">
             <div class="item-img">
-                <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvYzJmMDgzNDdiMDg5YjNkYzM2MTY2NzlhOWU1NTRmZTMtMjAweDIwMC05MC53ZWJw.webp" alt="">
+                <img src="{$v['dimgurl']}" alt="">
             </div>
             <div class="item-content">
-                <span class="span1">Jessica Lee</span>
-                <span class="span2">CEO / 珠宝设计师</span>
+                <span class="span1">{$v['dname']}</span>
+                <span class="span2">{$v['dposition']}</span>
             </div>
         </div>
-        <div class="container-item">
-            <div class="item-img">
-                <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvNzYzMmU0M2IyODE4MGM3ZTY3OTVkYWU3OGFhZDg0OTAtMjAweDIwMC05MC53ZWJw.webp" alt="">
-            </div>
-            <div class="item-content">
-                <span class="span1">Cherry Zhang</span>
-                <span class="span2"> 珠宝设计师</span>
-            </div>
-        </div>
-        <div class="container-item">
-            <div class="item-img">
-                <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvNWE1ZmRlMDM5N2Q4NzhmNmJkYWFiMTFjODM3NWY5OTktMjAweDIwMC05MC53ZWJw.webp" alt="">
-            </div>
-            <div class="item-content">
-                <span class="span1">Bernice Wu</span>
-                <span class="span2">珠宝设计师</span>
-            </div>
-        </div>
-        <div class="container-item">
-            <div class="item-img">
-                <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvMDU3ZWEyMjIzODliOWY1NTBjYWJkOGRmYmVlOGE0NDQtMjAweDIwMC05MC53ZWJw.webp" alt="">
-            </div>
-            <div class="item-content">
-                <span class="span1">Chloe Ma</span>
-                <span class="span2">珠宝设计师</span>
-            </div>
-        </div>
+        {/foreach}
     </div>
     <!-- container结束 -->
     <!-- contact开始 -->

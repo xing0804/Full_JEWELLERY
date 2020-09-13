@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-09-02 15:41:45
+/* Smarty version 3.1.34-dev-7, created on 2020-09-09 12:01:09
   from 'D:\Full_Stack\php\server\JEWELLERY\application\template\admin\addDym.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f4fbd396a57b1_72277508',
+  'unifunc' => 'content_5f58c4057ef0f5_17199067',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c9d75ee3025eeb7b561291a45274c7d7b4f0aa2f' => 
     array (
       0 => 'D:\\Full_Stack\\php\\server\\JEWELLERY\\application\\template\\admin\\addDym.html',
-      1 => 1599061301,
+      1 => 1599652864,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f4fbd396a57b1_72277508 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f58c4057ef0f5_17199067 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +33,7 @@ jquery.js"><?php echo '</script'; ?>
 >
 </head>
 <body>
-<div class="container">
+<div class="container" style="margin-top: 30px">
     <form action="/JEWELLERY/index.php/admin/dynamic/addDym" method="post">
         <div class="form-group">
             <label for="tid">动态类型</label>
@@ -52,7 +52,7 @@ jquery.js"><?php echo '</script'; ?>
         <input type="hidden" value="hidden" name="dimgurl">
         <div class="upload"></div>
 
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-success" style="margin-top: 20px">Submit</button>
     </form>
 </div>
 <?php echo '<script'; ?>

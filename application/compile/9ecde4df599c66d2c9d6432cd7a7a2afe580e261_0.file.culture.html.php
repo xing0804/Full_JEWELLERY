@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-09-02 15:08:52
+/* Smarty version 3.1.34-dev-7, created on 2020-09-07 12:48:31
   from 'D:\Full_Stack\php\server\JEWELLERY\application\template\index\culture.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f4fb584c66380_29829846',
+  'unifunc' => 'content_5f562c1f4ac585_07114984',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9ecde4df599c66d2c9d6432cd7a7a2afe580e261' => 
     array (
       0 => 'D:\\Full_Stack\\php\\server\\JEWELLERY\\application\\template\\index\\culture.html',
-      1 => 1599059330,
+      1 => 1599482910,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f4fb584c66380_29829846 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f562c1f4ac585_07114984 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,25 +51,24 @@ index/culture.js"><?php echo '</script'; ?>
         <div class="navbox">
             <ul>
                 <li>
-                    <a href="index.html">首页</a>
+                    <a href="/JEWELLERY/index.php/index/index/int">首页</a>
                     <i class="underline"></i>
                 </li>
+                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['menuData']->value, 'v');
+$_smarty_tpl->tpl_vars['v']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
+$_smarty_tpl->tpl_vars['v']->do_else = false;
+?>
                 <li>
-                    <a href="culture.html">品牌文化</a>
-                    <i class="underline" style="display: block;"></i>
-                </li>
-                <li>
-                    <a href="jewelry.html">珠宝首饰</a>
+                    <a href="<?php echo $_smarty_tpl->tpl_vars['v']->value['jumpurl'];?>
+"><?php echo $_smarty_tpl->tpl_vars['v']->value["cname"];?>
+</a>
                     <i class="underline"></i>
                 </li>
-                <li>
-                    <a href="dynamics.html">品牌动态</a>
-                    <i class="underline"></i>
-                </li>
-                <li>
-                    <a href="contact.html">联系我们</a>
-                    <i class="underline"></i>
-                </li>
+                <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </ul>
         </div>
     </div>
@@ -97,42 +96,27 @@ index/culture.js"><?php echo '</script'; ?>
     <!-- main区结束 -->
     <!-- container开始 -->
     <div class="container">
+        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['desData']->value, 'v');
+$_smarty_tpl->tpl_vars['v']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
+$_smarty_tpl->tpl_vars['v']->do_else = false;
+?>
         <div class="container-item">
             <div class="item-img">
-                <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvYzJmMDgzNDdiMDg5YjNkYzM2MTY2NzlhOWU1NTRmZTMtMjAweDIwMC05MC53ZWJw.webp" alt="">
+                <img src="<?php echo $_smarty_tpl->tpl_vars['v']->value['dimgurl'];?>
+" alt="">
             </div>
             <div class="item-content">
-                <span class="span1">Jessica Lee</span>
-                <span class="span2">CEO / 珠宝设计师</span>
+                <span class="span1"><?php echo $_smarty_tpl->tpl_vars['v']->value['dname'];?>
+</span>
+                <span class="span2"><?php echo $_smarty_tpl->tpl_vars['v']->value['dposition'];?>
+</span>
             </div>
         </div>
-        <div class="container-item">
-            <div class="item-img">
-                <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvNzYzMmU0M2IyODE4MGM3ZTY3OTVkYWU3OGFhZDg0OTAtMjAweDIwMC05MC53ZWJw.webp" alt="">
-            </div>
-            <div class="item-content">
-                <span class="span1">Cherry Zhang</span>
-                <span class="span2"> 珠宝设计师</span>
-            </div>
-        </div>
-        <div class="container-item">
-            <div class="item-img">
-                <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvNWE1ZmRlMDM5N2Q4NzhmNmJkYWFiMTFjODM3NWY5OTktMjAweDIwMC05MC53ZWJw.webp" alt="">
-            </div>
-            <div class="item-content">
-                <span class="span1">Bernice Wu</span>
-                <span class="span2">珠宝设计师</span>
-            </div>
-        </div>
-        <div class="container-item">
-            <div class="item-img">
-                <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvMDU3ZWEyMjIzODliOWY1NTBjYWJkOGRmYmVlOGE0NDQtMjAweDIwMC05MC53ZWJw.webp" alt="">
-            </div>
-            <div class="item-content">
-                <span class="span1">Chloe Ma</span>
-                <span class="span2">珠宝设计师</span>
-            </div>
-        </div>
+        <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </div>
     <!-- container结束 -->
     <!-- contact开始 -->

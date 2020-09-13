@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-09-02 17:20:24
+/* Smarty version 3.1.34-dev-7, created on 2020-09-09 12:02:55
   from 'D:\Full_Stack\php\server\JEWELLERY\application\template\admin\editDym.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f4fd4582c96a3_04549767',
+  'unifunc' => 'content_5f58c46f088608_84143368',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7b84cb002b652f10befdec43617f36d5e3f74d66' => 
     array (
       0 => 'D:\\Full_Stack\\php\\server\\JEWELLERY\\application\\template\\admin\\editDym.html',
-      1 => 1599067218,
+      1 => 1599068666,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f4fd4582c96a3_04549767 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f58c46f088608_84143368 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,6 +96,7 @@ upload.js"><?php echo '</script'; ?>
         $(".seeImg").css("display","none");
         $(".editImg").css("display","block").attr("imgFlag","true");
     })
+
     $.ajax({
         url:"/JEWELLERY/index.php/admin/dynamic/getOption",
         dataType:"json",
@@ -124,56 +125,7 @@ upload.js"><?php echo '</script'; ?>
 
         }
     }
-    // $.ajax({
-    //     url:"/JEWELLERY/index.php/admin/category/getOption",
-    //     dataType:"json",
-    //     success:function (e) {
-    //         var tid=$("#tid").attr("tid");
-    //         tree(e,1,tid);
-    //         $("#tid").html(str);
-    //         str="";
-    //     }
-    // })
-    //
-    // var str="";
-    //
-    // function str_repeat(str,num) {
-    //     var result="";
-    //     for(var i=0;i<num;i++){
-    //         result+=str;
-    //     }
-    //     return result;
-    // }
-    //
-    // function tree(data,$i,tid){
-    //
-    //     for(var i=0;i<data.length;i++){
-    //         if(data[i].child){
-    //             if(tid!=undefined){
-    //                 if(tid==data[i].tid){
-    //                     str+="<option value='"+data[i].cid+"' selected>"+str_repeat("&nbsp&nbsp",$i)+data[i].cname+"</option>";
-    //                 }else {
-    //                     str+="<option value='"+data[i].cid+"'>"+str_repeat("&nbsp&nbsp",$i)+data[i].cname+"</option>";
-    //                 }
-    //             }else {
-    //                 str+="<option value='"+data[i].cid+"'>"+str_repeat("&nbsp&nbsp",$i)+data[i].cname+"</option>";
-    //             }
-    //
-    //             tree(data[i].child,$i+1);
-    //         }else {
-    //             if(tid!=undefined){
-    //                 if(tid==data[i].tid){
-    //                     str+="<option value='"+data[i].cid+"' selected>"+str_repeat("&nbsp&nbsp",$i)+data[i].cname+"</option>";
-    //                 }else {
-    //                     str+="<option value='"+data[i].cid+"'>"+str_repeat("&nbsp&nbsp",$i)+data[i].cname+"</option>";
-    //                 }
-    //             }else {
-    //                 str+="<option value='"+data[i].cid+"'>"+str_repeat("&nbsp&nbsp",$i)+data[i].cname+"</option>";
-    //             }
-    //         }
-    //
-    //     }
-    // }
+
 <?php echo '</script'; ?>
 >
 </body>

@@ -57,41 +57,43 @@ a{
 /* main开始 */
 .main{
     width: 1320px;
-    height: 875px;
     padding: 0 40px;
     margin: 0 auto;
     margin-top: 100px;
     /* background-color: papayawhip; */
     position: relative;
+    height: 1360px;
 }
-/* .containter{
-    position: relative; 
-    width: 1046px;
-    height: 850px;
-} */
+/*.containter{*/
+/*    width: 1046px;*/
+/*    height: 1400px;*/
+/*}*/
 .con-list{
     width: 1046px;
-    height: 850px;
+
     padding: 0 5px;
     /* background-color: paleturquoise; */
     border-right: 1px solid rgb(226, 226, 226);
     position: absolute;
     left: 40px;
-    overflow: hidden;
+    /*overflow: hidden;*/
+}
+.clearfix:after{
+    content:"";/*设置内容为空*/
+    height:0;/*高度为0*/
+    line-height:0;/*行高为0*/
+    display:block;/*将文本转为块级元素*/
+    visibility:hidden;/*将元素隐藏*/
+    clear:both;/*清除浮动*/
 }
 .con-item{
     width: 986px;
     height: 170px;
     padding-right: 60px;
-    /* background-color: pink; */
 }
 .con-item .item-img{
     width: 260px;
     height: 140px;
-    /* padding: 15px 40px 15px 0; */
-    
-    /* background-color: plum; */
-    /* float: left; */
     display: inline-block;
     overflow: hidden !important;
     
@@ -123,18 +125,18 @@ a{
     color:#999999;font-size:12px;font-family:微软雅黑;line-height:20px;padding-top:3px;padding-bottom:10px;
     /* letter-spacing: 1px; */
 }
-.more{
-    display: block;
-    width: 56px;
-    height: 20px;
-    padding: 2px 6px;
-    border: 1px solid #999;
-    color: #999;
-    font-size: 14px;
-    position: absolute;
-    right: 390px;
-    bottom: 0px;
-}
+/*.more{*/
+/*    display: block;*/
+/*    width: 56px;*/
+/*    height: 20px;*/
+/*    padding: 2px 6px;*/
+/*    border: 1px solid #999;*/
+/*    color: #999;*/
+/*    font-size: 14px;*/
+/*    position: absolute;*/
+/*    right: 40px;*/
+/*    bottom: 0px;*/
+/*}*/
 /* search区开始 */
 .search{
     position: absolute;
@@ -198,7 +200,7 @@ a{
     justify-content: space-between;
     align-content: space-between;
     flex-wrap: nowrap;
-    margin-top: 80px;
+    margin-top: 80px;;
 }
 .bottom-item{
     width: 12.5%;

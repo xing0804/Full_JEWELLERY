@@ -40,36 +40,27 @@
     <!-- banner区开始 -->
     <div class="banner">
         <div class="banner-container">
-            <div class="img1 img">
-                <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvNzI1MzgwMzI5ZDY0NzM5ZmFhMmQwMzZkM2Y1N2I3ZjMtOTAud2VicA_p_p100_p_3D_p_p100_p_3D.webp" alt="">
-                <span class="banner-title">几何系列</span>
-                <span class="banner-translate">Geometry series</span>
-            </div>
+            <a href="/JEWELLERY/index.php/index/index/ShowList?name={$bigData['name']}">
+                <div class="img1 img">
+                    <img src="{$bigData['himgurl']}" alt="">
+                    <span class="banner-title">{$bigData['name']}</span>
+                    <span class="banner-translate">{$bigData['ename']}</span>
+                </div>
+            </a>
+
             <div class="small-img">
-                <div class="img2 img">
-                    <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvZTFkNDVjODFlODEwNGYzOTljZGIyZjc2NmUyMDBhMWItOTAud2VicA_p_p100_p_3D_p_p100_p_3D.webp"
-                        alt="">
-                    <span class="banner-title">戒指</span>
-                    <span class="banner-translate">Rings</span>
-                </div>
-                <div class="img2 img">
-                    <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvYmE4N2Q3ODkxMzkwY2NjOTk5MTNhNDczM2FjYTc5MDktOTAud2VicA_p_p100_p_3D_p_p100_p_3D.webp"
-                        alt="">
-                    <span class="banner-title">耳环/耳钉</span>
-                    <span class="banner-translate">Earings</span>
-                </div>
-                <div class="img2 img">
-                    <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvNTEwZjU1YzM1NTBhNzdmMGIyNmVmMGYxOTliMjU3OTItOTAud2VicA_p_p100_p_3D_p_p100_p_3D.webp"
-                        alt="">
-                    <span class="banner-title">一生一世</span>
-                    <span class="banner-translate">Lifetime</span>
-                </div>
-                <div class="img2 img">
-                    <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvYzkyNzZiZjNhYWVmOTk3YmZhN2ZmZjU2YWE5MDU1YjYtOTAud2VicA_p_p100_p_3D_p_p100_p_3D.webp"
-                        alt="">
-                    <span class="banner-title">字母系列</span>
-                    <span class="banner-translate">Subtitle series</span>
-                </div>
+                {foreach $smallData as $k=>$v}
+                <a href="/JEWELLERY/index.php/index/index/ShowList?name={$v['name']}">
+                    <div class="img2 img">
+                        <img src="{$v['himgurl']}"
+                             alt="">
+                        <span class="banner-title">{$v['name']}</span>
+                        <span class="banner-translate">{$v['ename']}</span>
+                    </div>
+                </a>
+
+                {/foreach}
+
             </div>
         </div>
     </div>
@@ -91,78 +82,18 @@
         </div>
 
         <div class="main-container">
+            {foreach $productData as $v}
             <div class="container-item img">
-                <a href="product.html">
+                <a href="/JEWELLERY/index.php/index/index/showPro?pid={$v['pid']}">
                     <div class="item-img">
-                        <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvM2UwOGI2Njc2MDVhNzA4YmM2MDA4YWUxMmViNmQ5MGQtMzAweDQwMC05MC53ZWJw.webp"
+                        <img src="{$v['pimgurl']}"
                             alt="">
                     </div>
-                    <span>一生一世 - 耳钉</span>
+                    <span>{$v['pname']}</span>
                 </a>
             </div>
-            <div class="container-item img">
-                <a href="#">
-                    <div class="item-img">
-                        <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvNWIyN2UxMGQzOWE5ZDVhMzNmOWViOTY4NGU4ZTJkOWItMzAweDQwMC05MC53ZWJw.webp"
-                            alt="">
-                    </div>
-                    <span>一生一世 – 珍珠吊坠</span>
-                </a>
-            </div>
-            <div class="container-item img">
-                <a href="#">
-                    <div class="item-img">
-                        <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvZjcyOGMxMzJlNDQyOGFiZTc5YWU4YjMyZGM4NGI2NGQtMzAweDQwMC05MC53ZWJw.webp"
-                            alt="">
-                    </div>
-                    <span>一生一世 - 戒指</span>
-                </a>
-            </div>
-            <div class="container-item img">
-                <a href="#">
-                    <div class="item-img">
-                        <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvM2I3NDkwZmFhZDdiNGM3N2E4MTc1YmFkNWJkMDE3NmQtMzAweDQwMC05MC53ZWJw.webp"
-                            alt="">
-                    </div>
-                    <span>一生一世 - 珍珠耳钉</span>
-                </a>
-            </div>
-            <div class="container-item img">
-                <a href="#">
-                    <div class="item-img">
-                        <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvM2RjNmM1NmJkMWIyNjMzMzcyNzE5YTY4NzYxYzVlZjYtMzAweDQwMC05MC53ZWJw.webp"
-                            alt="">
-                    </div>
-                    <span>一生一世 - 项链</span>
-                </a>
-            </div>
-            <div class="container-item img">
-                <a href="#">
-                    <div class="item-img">
-                        <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvZDIzN2YyMTk2NjQ3ZTVjMWI4NmYyMDE2ZjQ1NmFmMmItMzAweDQwMC05MC53ZWJw.webp"
-                            alt="">
-                    </div>
-                    <span>字母系列 - 戒指</span>
-                </a>
-            </div>
-            <div class="container-item img">
-                <a href="#">
-                    <div class="item-img">
-                        <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvY2ZmZmQzZWI2MGNhNjliMTFiZDJmMDRiZWU5N2FlZTYtMzAweDQwMC05MC53ZWJw.webp"
-                            alt="">
-                    </div>
-                    <span>字母系列 - 零</span>
-                </a>
-            </div>
-            <div class="container-item img">
-                <a href="#">
-                    <div class="item-img">
-                        <img src="https://ccdn.goodq.top/caches/bd1cf84aefb8c117a6cc8b69507f83e3/aHR0cHM6Ly81ZDY4ZDIzOWU1YmNjLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDgvMmRjMTgwODZkYjFjOGZmMWE5MmM5ZmFiOWVkZTkxNmItMzAweDQwMC05MC53ZWJw.webp"
-                            alt="">
-                    </div>
-                    <span>字母系列 - 五</span>
-                </a>
-            </div>
+            {/foreach}
+
         </div>
     </div>
     <!-- main结束 -->

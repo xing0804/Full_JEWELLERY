@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-09-02 16:03:12
+/* Smarty version 3.1.34-dev-7, created on 2020-09-09 12:02:40
   from 'D:\Full_Stack\php\server\JEWELLERY\application\template\admin\seeDym.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f4fc240987c34_21565528',
+  'unifunc' => 'content_5f58c4606c6f93_16469794',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '32a4ea53cd25644c2319312ee2eea50466ebfc50' => 
     array (
       0 => 'D:\\Full_Stack\\php\\server\\JEWELLERY\\application\\template\\admin\\seeDym.html',
-      1 => 1599062586,
+      1 => 1599474515,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f4fc240987c34_21565528 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f58c4606c6f93_16469794 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>添加动态</title>
+    <title>查看动态</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>

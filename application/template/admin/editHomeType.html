@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加动态</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container" style="margin-bottom: 200px;margin-top: 30px">
+    <form action="/JEWELLERY/index.php/admin/homeType/editHomeType?hid={$data['hid']}" method="post">
+        <div class="form-group">
+            <label for="name">类型中文名</label>
+            <input type="text" class="form-control" id="name" name="name" value="{$data['name']}">
+        </div>
+        <div class="form-group">
+            <label for="ename">类型英文名</label>
+            <input type="text" class="form-control" id="ename" name="ename" placeholder="类型英文名" value="{$data['ename']}">
+        </div>
+        <div class="form-group seeImg">
+            <label for="himgurl">类型图片</label>
+            <img src="{$data['himgurl']}" alt="" style="display:block;width: 200px;height: 200px" id="himgurl">
+        </div>
+
+        <div class="form-group editImg" style="display: none;margin-bottom: 20px" imgFlag="false">
+            <label for="himgurl">设计师图片</label>
+            <input type="hidden" value="hidden" name="himgurl">
+            <div class="upload"></div>
+        </div>
+
+
+        <button type="button" class="btn btn-default editbtn" style="margin-top: 20px">修改图片</button>
+        <br><br>
+
+        <button type="submit" class="btn btn-default" style="margin-top: 20px">修改</button>
+
+    </form>
+</div>
+<script src="{JS_ADD}jquery.js"></script>
+<script src="{JS_ADD}upload.js"></script>
+<script>
+    //上传图片
+    var uploadObj=new upload();
+
+    uploadObj.createView({
+        parent:document.querySelector(".upload")
+    })
+    uploadObj.selectBtn.parentNode.style.lineHeight="50px";
+    uploadObj.upBtn.style.lineHeight="50px";
+    uploadObj.up("/JEWELLERY/index.php/admin/dynamic/uploadfile",function (e) {
+        $("input[type=hidden]").val(e[0]);
+    })
+
+    $(".editbtn").click(function () {
+        $(".seeImg").css("display","none");
+        $(".editImg").css("display","block").attr("imgFlag","true");
+    })
+
+
+</script>
+</body>
+</html>

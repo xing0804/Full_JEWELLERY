@@ -13,6 +13,7 @@
                 <th>所属分类</th>
                 <th>所属系列</th>
                 <th>产品名称</th>
+                <th>是否推荐位</th>
                 <th>操作</th>
             </tr>
             {foreach $data as $v}
@@ -20,6 +21,7 @@
                 <td>{$v["lid"]}</td>
                 <td>{$v["xid"]}</td>
                 <td>{$v["pname"]}</td>
+                <td>{$v["isindex"]}</td>
                 <td>
                     <a href="/JEWELLERY/index.php/admin/product/show?pid={$v['pid']}">查看</a>
                     <a href="/JEWELLERY/index.php/admin/product/edit?pid={$v['pid']}">编辑</a>

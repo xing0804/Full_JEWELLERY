@@ -27,7 +27,7 @@ window.onload = function () {
     for(let i=0;i<imgboxs.length;i++){
        
         imgboxs[i].onmouseover=function(){
-            imgs[i].style.animation="imgover 2s";
+            imgs[i].style.animation="imgover 2s forwards";
         }
         imgboxs[i].onmouseout=function(){
             imgs[i].style.animation="none";

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>联系我们</title>
-    <link rel="stylesheet" href="css/contact.css">
-    <script src="js/animate.js"></script>
-    <script src="js/contact.js"></script>
+    <link rel="stylesheet" href="{CSS_ADD}index/contact.css">
+    <script src="{JS_ADD}index/animate.js"></script>
+    <script src="{JS_ADD}index/contact.js"></script>
     <script src="https://webapi.amap.com/maps?v=1.4.13&key=09e3c0a00b6c5b81ed5802e3c7ae377b"></script>
     <script src="https://a.amap.com/jsapi_demos/static/demo-center/js/demoutils.js"></script>
 </head>
@@ -14,7 +14,7 @@
     <!-- logo开始 -->
     <div class="logo">
         <a href="#">
-            <img src="imgs/logo.jpg" alt="">
+            <img src="{IMG_ADD}logo.jpg" alt="">
         </a>
     </div>
     <!-- logo结束 -->
@@ -23,25 +23,15 @@
         <div class="navbox">
             <ul>
                 <li>
-                    <a href="index.html">首页</a>
+                    <a href="/JEWELLERY/index.php/index/index/int">首页</a>
                     <i class="underline"></i>
                 </li>
+                {foreach $menuData as $v}
                 <li>
-                    <a href="culture.html">品牌文化</a>
+                    <a href="{$v['jumpurl']}">{$v["cname"]}</a>
                     <i class="underline"></i>
                 </li>
-                <li>
-                    <a href="jewelry.html">珠宝首饰</a>
-                    <i class="underline"></i>
-                </li>
-                <li>
-                    <a href="dynamics.html">品牌动态</a>
-                    <i class="underline"></i>
-                </li>
-                <li>
-                    <a href="contact.html">联系我们</a>
-                    <i class="underline" style="display: block;"></i>
-                </li>
+                {/foreach}
             </ul>
         </div>
     </div>

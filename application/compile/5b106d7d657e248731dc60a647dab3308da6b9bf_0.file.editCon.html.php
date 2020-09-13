@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-09-02 17:52:21
+/* Smarty version 3.1.34-dev-7, created on 2020-09-10 12:41:22
   from 'D:\Full_Stack\php\server\JEWELLERY\application\template\admin\editCon.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f4fdbd50a71f1_86697094',
+  'unifunc' => 'content_5f5a1ef2989be2_47366558',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5b106d7d657e248731dc60a647dab3308da6b9bf' => 
     array (
       0 => 'D:\\Full_Stack\\php\\server\\JEWELLERY\\application\\template\\admin\\editCon.html',
-      1 => 1599069119,
+      1 => 1599741672,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f4fdbd50a71f1_86697094 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f5a1ef2989be2_47366558 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,6 +60,17 @@ tinymce/tinymce.min.js"><?php echo '</script'; ?>
             <label for="pname">产品名称</label>
             <input type="text" class="form-control" id="pname" name="pname" placeholder="产品名称" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['pname'];?>
 ">
+        </div>
+        <div class="radio">
+            <b>是否是推荐位</b>
+            <label>
+                <input type="radio" name="isindex" value="yes" checked>
+                是
+            </label>
+            <label>
+                <input type="radio" name="isindex" value="no">
+                否
+            </label>
         </div>
         <div class="form-group">
             <label for="pprice">产品价格</label>
