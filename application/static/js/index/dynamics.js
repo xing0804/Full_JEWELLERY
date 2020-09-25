@@ -109,5 +109,19 @@ window.onload = function () {
         }
     }
 
+    //搜索
+    $(".searchBtn").click(function () {
+        let searchName=$(".searchCon").val();
+        console.log(searchName);
+        $.ajax({
+            url:"/JEWELLERY/index.php/index/index/searchDym",
+            data:{searchName:searchName},
+            success(e){
+                console.log(e);
+                $(".con-list").html(e);
+            }
+        })
+    })
+
     
 }

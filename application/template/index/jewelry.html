@@ -74,10 +74,10 @@
         </div>
         <div class="search-input">
             <div class="input-left">
-                <input type="text" placeholder="产品名称">
+                <input type="text" placeholder="产品名称" name="searchName" class="searchCon">
             </div>
             <div class="input-right">
-                <button>
+                <button type="submit" class="searchBtn">
                     <img src="{IMG_ADD}search.png" alt="">
                 </button>
             </div>
@@ -99,7 +99,6 @@
                 <div class="item-content">{$v['pname']}</div>
             </div>
             {/foreach}
-
         </div>
         <div class="more">
             <a href="javascrpt:;">查看更多产品</a>

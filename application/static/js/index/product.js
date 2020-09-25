@@ -105,4 +105,8 @@ window.onload=function(){
     $(".con-item").click(function(){
         window.location.href="jewelry.html";
     })
-}
+
+
+
+
+    }

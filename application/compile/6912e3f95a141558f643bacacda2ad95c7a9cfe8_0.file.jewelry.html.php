@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-09-10 13:30:46
+/* Smarty version 3.1.34-dev-7, created on 2020-09-14 12:01:31
   from 'D:\Full_Stack\php\server\JEWELLERY\application\template\index\jewelry.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f5a2a860771e6_34316041',
+  'unifunc' => 'content_5f5f5b9b603915_41180536',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6912e3f95a141558f643bacacda2ad95c7a9cfe8' => 
     array (
       0 => 'D:\\Full_Stack\\php\\server\\JEWELLERY\\application\\template\\index\\jewelry.html',
-      1 => 1599744644,
+      1 => 1600084889,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f5a2a860771e6_34316041 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f5f5b9b603915_41180536 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -135,10 +135,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </div>
         <div class="search-input">
             <div class="input-left">
-                <input type="text" placeholder="产品名称">
+                <input type="text" placeholder="产品名称" name="searchName" class="searchCon">
             </div>
             <div class="input-right">
-                <button>
+                <button type="submit" class="searchBtn">
                     <img src="<?php echo IMG_ADD;?>
 search.png" alt="">
                 </button>
@@ -171,7 +171,6 @@ $_smarty_tpl->tpl_vars['v']->do_else = false;
             <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-
         </div>
         <div class="more">
             <a href="javascrpt:;">查看更多产品</a>

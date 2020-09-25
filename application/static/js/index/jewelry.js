@@ -14,31 +14,6 @@ window.onload = function () {
         }
     }
 
-    //标签点击事件
-    //获取标签
-    // var labels=document.querySelectorAll(".li-right a");
-    // // console.log(labels);
-    // for(let i=0;i<labels.length;i++){
-    //     labels[i].onclick=function(){
-    //         console.log(i);
-    //         for(var j=0;j<labels.length;j++){
-    //             labels[j].style.cssText="border: none; color: #999;"
-    //         }
-    //         labels[i].style.cssText="border: 1px solid #999; color: #000;"
-    //     }
-    // }
-    var labels1=document.querySelectorAll(".li-right1 a");
-    // console.log(labels);
-    for(let i=0;i<labels1.length;i++){
-        labels1[i].onclick=function(){
-            console.log(i);
-            for(var j=0;j<labels1.length;j++){
-                labels1[j].style.cssText="border: none; color: #999;"
-            }
-            labels1[i].style.cssText="border: 1px solid #999; color: #000;"
-        }
-    }
-
     //查看更多
     var more=document.querySelector(".more");
     var con=document.querySelector(".con-list");
@@ -87,9 +62,10 @@ window.onload = function () {
     //标签选择产品
     var xilie=document.querySelectorAll(".xilie");
     var leibie=document.querySelectorAll(".leibie");
-    for (var i=0;i<xilie.length;i++){
+    let xid="all",lid="all";
+    for (let i=0;i<xilie.length;i++){
         xilie[i].onclick=function () {
-            var xid=$(this).attr("xid");
+            xid=$(this).attr("xid");
             $(".xilie").css({
                 "border": "none",
                 "color": "#999",
@@ -98,35 +74,195 @@ window.onload = function () {
                 "border": "1px solid #999",
                 "color": "#000",
             })
-            console.log(xid);
-            $.ajax({
-                url:"/JEWELLERY/index.php/index/index/ProList",
-                data:{xid:xid},
-                success(e){
+            console.log(xid,lid);
+            if(lid=="all"){
+                $.ajax({
+                    url:"/JEWELLERY/index.php/index/index/ProList",
+                    data:{xid:xid,lid:"all"},
+                    success(e){
+                        console.log(e);
+                        var num=parseInt(e.substr(e.length-2,2));
+                        console.log(num);
+                        var stre=e.substring(0,e.length-3);
+                        var high=Math.ceil(num/4)*460;
+                        console.log(high);
+                        if(high<1400){
+                            $(".con-list").html(stre).css({
+                                "height":high+"px"
+                            });
+                            $(".more").css("display","none");
+                        }else {
+                            $(".con-list").html(stre).css({
+                                "height":"1400px"
+                            });
+                            $(".more").css("display","block");
+                        }
 
-                    console.log(e);
-                    var num=parseInt(e.substr(e.length-2,2));
-                    console.log(num);
-                    var high=Math.ceil(num/4)*460;
-                    console.log(high);
-                    if(high<1380){
-                        $(".con-list").html(e).css({
-                            "height":high+"px"
-                        });
-                        $(".more").css("display","none");
-                    }else {
-                        $(".con-list").html(e).css({
-                            "height":"1380px"
-                        });
-                        $(".more").css("display","block");
+                    },
+                    error(){
+                        console.log("error");
                     }
+                })
+            }else {
+                $.ajax({
+                    url:"/JEWELLERY/index.php/index/index/ProList",
+                    data:{xid:xid,lid:lid},
+                    success(e){
+                        console.log(e);
+                        var num=parseInt(e.substr(e.length-2,2));
+                        console.log(num);
+                        var stre=e.substring(0,e.length-3);
+                        var high=Math.ceil(num/4)*460;
+                        console.log(high);
+                        if(high<1400){
+                            $(".con-list").html(stre).css({
+                                "height":high+"px"
+                            });
+                            $(".more").css("display","none");
+                        }else {
+                            $(".con-list").html(stre).css({
+                                "height":"1400px"
+                            });
+                            $(".more").css("display","block");
+                        }
 
-                },
-                error(){
-                    console.log("error");
-                }
-            })
+                    },
+                    error(){
+                        console.log("error");
+                    }
+                })
+            }
         }
     }
+    for (let i=0;i<leibie.length;i++){
+        leibie[i].onclick=function () {
+            lid=$(this).attr("lid");
+            $(".leibie").css({
+                "border": "none",
+                "color": "#999",
+            })
+            $(this).css({
+                "border": "1px solid #999",
+                "color": "#000",
+            })
+            console.log(xid,lid);
+            if(xid=="all"){
+                console.log(lid);
+                $.ajax({
+                    url:"/JEWELLERY/index.php/index/index/ProList",
+                    data:{xid:"all",lid:lid},
+                    success(e){
+                        console.log(e);
+                        var num=parseInt(e.substr(e.length-2,2));
+                        console.log(num);
+                        var stre=e.substring(0,e.length-3);
+                        var high=Math.ceil(num/4)*460;
+                        console.log(high);
+                        if(high<1400){
+                            $(".con-list").html(stre).css({
+                                "height":high+"px"
+                            });
+                            $(".more").css("display","none");
+                        }else {
+                            $(".con-list").html(stre).css({
+                                "height":"1400px"
+                            });
+                            $(".more").css("display","block");
+                        }
+
+                    },
+                    error(){
+                        console.log("error");
+                    }
+                })
+            }else {
+                console.log(lid);
+                $.ajax({
+                    url:"/JEWELLERY/index.php/index/index/ProList",
+                    data:{xid:xid,lid:lid},
+                    success(e){
+                        console.log(e);
+                        var num=parseInt(e.substr(e.length-2,2));
+                        console.log(num);
+                        var stre=e.substring(0,e.length-3);
+                        var high=Math.ceil(num/4)*460;
+                        console.log(high);
+                        if(high<1400){
+                            $(".con-list").html(stre).css({
+                                "height":high+"px"
+                            });
+                            $(".more").css("display","none");
+                        }else {
+                            $(".con-list").html(stre).css({
+                                "height":"1400px"
+                            });
+                            $(".more").css("display","block");
+                        }
+
+                    },
+                    error(){
+                        console.log("error");
+                    }
+                })
+            }
+        }
+    }
+    $.ajax({
+        url:"/JEWELLERY/index.php/index/index/ProList",
+        data:{xid:xid,lid:lid},
+        success(e){
+            console.log(e);
+            var num=parseInt(e.substr(e.length-2,2));
+            console.log(num);
+            var stre=e.substring(0,e.length-3);
+            var high=Math.ceil(num/4)*460;
+            console.log(high);
+            if(high<1400){
+                $(".con-list").html(stre).css({
+                    "height":high+"px"
+                });
+                $(".more").css("display","none");
+            }else {
+                $(".con-list").html(stre).css({
+                    "height":"1400px"
+                });
+                $(".more").css("display","block");
+            }
+
+        },
+        error(){
+            console.log("error");
+        }
+    });
+
+    //搜索
+    $(".searchBtn").click(function () {
+        let searchName=$(".searchCon").val();
+        console.log(searchName);
+        $.ajax({
+            url:"/JEWELLERY/index.php/index/index/searchProduct",
+            data:{searchName:searchName},
+            success(e){
+                console.log(e);
+                var num=parseInt(e.substr(e.length-2,2));
+                console.log(num);
+                var stre=e.substring(0,e.length-3);
+                var high=Math.ceil(num/4)*460;
+                console.log(high);
+                if(high<1400){
+                    $(".con-list").html(stre).css({
+                        "height":high+"px"
+                    });
+                    $(".more").css("display","none");
+                }else {
+                    $(".con-list").html(stre).css({
+                        "height":"1400px"
+                    });
+                    $(".more").css("display","block");
+                }
+            }
+        })
+    })
+
 
 }

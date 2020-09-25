@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-09-09 11:51:30
+/* Smarty version 3.1.34-dev-7, created on 2020-09-24 12:25:56
   from 'D:\Full_Stack\php\server\JEWELLERY\application\template\index\geometry.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f58c1c2c55285_89424422',
+  'unifunc' => 'content_5f6c9054dc5e14_48677358',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '88f57a4dd83f76db93834985729142314d23516f' => 
     array (
       0 => 'D:\\Full_Stack\\php\\server\\JEWELLERY\\application\\template\\index\\geometry.html',
-      1 => 1599652289,
+      1 => 1600869630,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f58c1c2c55285_89424422 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f6c9054dc5e14_48677358 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,6 +32,10 @@ index/geometry.css">
     <?php echo '<script'; ?>
  src="<?php echo JS_ADD;?>
 index/animate.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="<?php echo JS_ADD;?>
+jquery.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
  src="<?php echo JS_ADD;?>
@@ -76,7 +80,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <!-- nav区结束 -->
     <!-- container -->
     <div class="container">
-        <div class="con-top">
+        <div class="con-top" tid="<?php echo $_smarty_tpl->tpl_vars['listData']->value['lname'];?>
+">
             <div class="title">
                 <?php echo $_smarty_tpl->tpl_vars['listData']->value['lname'];?>
 
@@ -87,10 +92,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </div>
             <div class="search-input">
                 <div class="input-left">
-                    <input type="text" placeholder="产品名称">
+                    <input type="text" placeholder="产品名称" name="searchName" class="searchCon">
                 </div>
-                <div class="input-right">
-                    <button>
+                <div class="input-right" >
+                    <button class="searchBtn">
                         <img src="<?php echo IMG_ADD;?>
 search.png" alt="">
                     </button>
@@ -107,7 +112,8 @@ $_smarty_tpl->tpl_vars['v']->do_else = false;
 ?>
         <div class="con-item img">
             <div class="item-img">
-                <a href="#">
+                <a href="/JEWELLERY/index.php/index/index/showPro?pid=<?php echo $_smarty_tpl->tpl_vars['v']->value['pid'];?>
+">
                     <img src="<?php echo $_smarty_tpl->tpl_vars['v']->value['pimgurl'];?>
 "
                         alt="">

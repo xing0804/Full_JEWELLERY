@@ -6,6 +6,7 @@
     <title>几何系列</title>
     <link rel="stylesheet" href="{CSS_ADD}index/geometry.css">
     <script src="{JS_ADD}index/animate.js"></script>
+    <script src="{JS_ADD}jquery.js"></script>
     <script src="{JS_ADD}index/geometry.js"></script>
 </head>
 <body>
@@ -36,7 +37,7 @@
     <!-- nav区结束 -->
     <!-- container -->
     <div class="container">
-        <div class="con-top">
+        <div class="con-top" tid="{$listData['lname']}">
             <div class="title">
                 {$listData['lname']}
             </div>
@@ -45,10 +46,10 @@
             </div>
             <div class="search-input">
                 <div class="input-left">
-                    <input type="text" placeholder="产品名称">
+                    <input type="text" placeholder="产品名称" name="searchName" class="searchCon">
                 </div>
-                <div class="input-right">
-                    <button>
+                <div class="input-right" >
+                    <button class="searchBtn">
                         <img src="{IMG_ADD}search.png" alt="">
                     </button>
                 </div>
@@ -59,7 +60,7 @@
         {foreach $proData as $v}
         <div class="con-item img">
             <div class="item-img">
-                <a href="#">
+                <a href="/JEWELLERY/index.php/index/index/showPro?pid={$v['pid']}">
                     <img src="{$v['pimgurl']}"
                         alt="">
                 </a>

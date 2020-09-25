@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-09-10 03:01:04
+/* Smarty version 3.1.34-dev-7, created on 2020-09-14 12:58:02
   from 'D:\Full_Stack\php\server\JEWELLERY\application\template\index\dynamics.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f5996f0587066_45014321',
+  'unifunc' => 'content_5f5f68da386c79_21355003',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '614bc44d170c1381a605ec7e963f87e2d18d3248' => 
     array (
       0 => 'D:\\Full_Stack\\php\\server\\JEWELLERY\\application\\template\\index\\dynamics.html',
-      1 => 1599706862,
+      1 => 1600088252,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f5996f0587066_45014321 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f5f68da386c79_21355003 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -124,12 +124,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <div class="search">
             <div class="search-input">
                 <div class="input-left">
-                    <input type="text" placeholder="关键词">
+                    <input type="text" placeholder="关键词" class="searchCon">
                 </div>
                 <div class="input-right">
                     <button>
                         <img src="<?php echo IMG_ADD;?>
-search.png" alt="">
+search.png" alt="" class="searchBtn">
                     </button>
                 </div>
             </div>

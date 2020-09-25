@@ -90,15 +90,22 @@ class index{
         $smarty->display("index/jewelry.html");
     }
 
+    //珠宝首饰页面根据标签选择相应的产品
     function ProList(){
         $database=new db();
         $db=$database->db;
         $xid=$_GET["xid"];
+        $lid=$_GET["lid"];
 
-        if($xid=="all"){
+
+        if($xid=="all" && $lid=="all"){
             $result=$db->query("select * from product");
-        }else{
+        }else if($xid==="all" && $lid!=="all"){
+            $result=$db->query("select * from product where lid='$lid'");
+        }else if($xid!=="all" && $lid==="all"){
             $result=$db->query("select * from product where xid='$xid'");
+        }else if($xid!=="all" && $lid!=="all"){
+            $result=$db->query("select * from product where xid='$xid' and lid='$lid'");
         }
 
         $str="";
@@ -120,6 +127,66 @@ class index{
         echo $i;
     }
 
+    //珠宝首饰搜索功能
+    function searchProduct(){
+        $searchName=$_GET["searchName"];
+        $database=new db();
+        $db=$database->db;
+        $result=$db->query("select * from product where pname like '%$searchName%'");
+
+        $str="";
+        $i=$result->num_rows;
+        while ($row=$result->fetch_assoc()){
+            $str.='
+            <div class="con-item img">
+                <div class="item-img">
+                    <a href="/JEWELLERY/index.php/index/index/showPro?pid='.$row["pid"].'">
+                        <img src='.$row['pimgurl'].'
+                            alt="">
+                    </a>
+                </div>
+                <div class="item-content">'.$row['pname'].'</div>
+            </div>                          
+              ';
+        };
+        echo $str;
+        echo $i;
+    }
+
+    //分类类型页面搜索
+    function typeSearchPro(){
+        $searchName=$_GET["searchName"];
+        $tid=$_GET["tid"];
+        $database=new db();
+        $db=$database->db;
+        $type=$db->query("select * from product where xid='$tid'");
+        if($type->num_rows){
+            $result=$db->query("select * from product where xid='$tid' and lid like '%$searchName%'");
+        }else{
+            $result=$db->query("select * from product where lid='$tid' and xid like '%$searchName%'");
+        }
+
+
+        $str="";
+        $i=$result->num_rows;
+        while ($row=$result->fetch_assoc()){
+            $str.='
+            <div class="con-item img">
+                <div class="item-img">
+                    <a href="/JEWELLERY/index.php/index/index/showPro?pid='.$row["pid"].'">
+                        <img src='.$row['pimgurl'].'
+                            alt="">
+                    </a>
+                </div>
+                <div class="item-content">'.$row['pname'].'</div>
+            </div>                          
+              ';
+        };
+        echo $str;
+        echo $i;
+    }
+
+    //联系页面初始化
     function ShowContact(){
         $smarty=new smarty();
         $database=new db();
@@ -129,6 +196,8 @@ class index{
 
         $smarty->display("index/contact.html");
     }
+
+    //动态页面初始化
     function ShowDynamic(){
 
         $smarty=new smarty();
@@ -167,6 +236,7 @@ class index{
 
     }
 
+    //根据标签选择动态
     function DymList(){
         $database=new db();
         $db=$database->db;
@@ -203,7 +273,39 @@ class index{
         echo json_encode($str);
     }
 
-    //    进入类别/系列页面
+    //搜索动态
+    function searchDym(){
+        $searchName=$_GET["searchName"];
+        $database=new db();
+        $db=$database->db;
+        $result=$db->query("select * from dynamic where dtitle like '%$searchName%'");
+        $str="";
+        while ($row=$result->fetch_assoc()){
+            $str.='
+                <div class="con-item img">
+                        <div class="item-img">
+                            <img src='.$row['dimgurl'].'
+                                 alt="">
+                        </div>
+                        <div class="item-content">
+                            <div class="item-title">
+                                '.$row['dtitle'].'
+                            </div>
+                            <div class="item-date">
+                                发布时间：'.$row['dtime'].'
+                            </div>
+                            <div class="item-text">
+                                '.$row['dmsg'].'
+                            </div>
+                        </div>
+                    </div>
+                  
+              ';
+        }
+        echo $str;
+    }
+
+    //    进入类别/系列页面，主页面点击类型进入类型页面
     function ShowList(){
         $name=$_GET["name"];
         $smarty=new smarty();
@@ -229,6 +331,7 @@ class index{
 
     }
 
+    //产品详情页面显示
     function showPro(){
         $pid=$_GET["pid"];
         $smarty=new smarty();
@@ -244,6 +347,7 @@ class index{
         $smarty->display("index/product.html");
     }
 
+    //菜单显示
     function menu($sm,$base){
 
         $result=$base->query("select * from category where lid=0");
